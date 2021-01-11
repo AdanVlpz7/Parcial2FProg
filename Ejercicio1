@@ -1,0 +1,64 @@
+/*
+Se desea realizar una estadística de los pesos de los alumnos de un colegio de acuerdo a la siguiente tabla: Alumnos de menos de 40 kg. Alumnos entre 40 y 50 kg. 
+Alumnos de más de 50 kg y menos de 60 kg. Alumnos de más o igual a 60 kg. Realiza un programa en C.
+*/
+
+#include <stdio.h>
+
+
+
+int main() {
+
+    int n = 0;
+
+    int g1 = 0,g2 = 0,g3 = 0,g4 = 0; //grupos por peso
+
+    int aux;
+
+
+
+    printf("¿Cuantos alumnos quiere clasificar?\n");
+
+    scanf("%d",&n);
+
+    
+
+    for(int i = 1; i <= n; i++){
+
+        printf("Introduzca el peso del alumno %d : ",i);
+
+        scanf("%d",&aux);
+
+        if(aux < 40)
+
+            g1++;
+
+        if(aux >= 40 && aux <= 50)
+
+            g2++;
+
+        if(aux > 50 && aux < 60)
+
+            g3++;
+
+        if(aux >= 60)
+
+            g4++;
+
+        
+
+    }
+
+    printf("En este grupo tenemos: \n"
+
+            "%d alumnos con un peso menor a 40kg\n"
+
+            "%d alumnos con un peso entre 40 y 50kg\n"
+
+            "%d alumnos con un peso entre 50 y 60kg\n"
+
+            "%d alumnos con un peso mayor a 60kg\n"
+
+            ,g1,g2,g3,g4);
+
+}
