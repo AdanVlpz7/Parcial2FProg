@@ -1,0 +1,40 @@
+/*
+Elabora un programa en C que, al recibir como datos tres valores enteros T, P y N, permita comprobar la igualdad de la siguiente expresión:
+
+[T/P]^N=T^N/P^N
+
+Datos: T, P y N (variables de tipo entero que representan los datos que se ingresan).
+
+*/
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int T,P,N;
+    
+    int cla1, cla2;
+    
+    printf("Este programa comprueba la igualdad\n"
+            "[T/P]^N=T^N/P^N\n");
+            
+    printf("Introduzca el valor de T: \n");
+    scanf("%d",&T);
+    
+    printf("Introduzca el valor de P: \n");
+    scanf("%d",&P);
+    
+    printf("Introduzca el valor de N: \n");
+    scanf("%d",&N);
+    
+    cla1 = pow(T/P,N);
+    cla2 = (pow(T,N)/pow(P,N));
+    
+    if(cla1 == cla2)
+        printf("La igualdad se cumple");
+    else 
+        printf("La igualdad no se cumple");
+        
+    printf("\nLa primera parte de la ecuacion da : %d",cla1);
+    printf("\nLa segunda parte de la ecuacion da: %d",cla2);
+}
+  
